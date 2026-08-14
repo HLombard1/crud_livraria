@@ -1,0 +1,18 @@
+Trabalho Prepared Statements 
+Henrique Lombardi	DSM9
+
+É uma prática php pra melhorar a segurança do seu banco de dados, ele impede um hacker de usar o SQL injection.
+
+SQL injection, ele injeta um comando na sua comunicação com o banco de dados. Ele pode ser usado por exemplo acessando um login de administrador, tendo acesso direto a um email de administrador.
+
+Com o Prepared Statements você “camufla” o email com uma variável.
+
+EX:
+
+$stmt = $pdo->prepare('SELECT * FROM usuarios WHERE email = :email AND senha = :senha');
+$stmt->execute([
+    'email' => $campo_email,
+    'senha' => $campo_senha
+]);
+
+Este é o método PDO, onde o email e senha na verdade são variáveis que recebem o email e senha.
