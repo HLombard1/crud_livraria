@@ -16,3 +16,4 @@ $stmt->execute([
 ]);
 
 Este é o método PDO, onde o email e senha na verdade são variáveis que recebem o email e senha.
+a
